@@ -2,8 +2,8 @@
   <section class="home-page">
     <div>
       <div class="flex">
-        <h1 class="full">Home</h1>
-        <h2 class="full">This is the home page</h2>
+        <h1 class="full off-third">Home</h1>
+        <h2 class="full off-third">This is the home page</h2>
       </div>
       <div class="flex three">
         <div></div>
