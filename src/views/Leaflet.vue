@@ -1,9 +1,7 @@
 <template>
   <section class="leaflet-page">
     <div id="mapid">
-
     </div>
-    
   </section>
 </template>
 
@@ -25,7 +23,7 @@ export default {
   name: "Leaflet",
   data() {
     return {
-      myMap: null,
+      map: null,
     }
   },
   mounted() {
@@ -33,7 +31,7 @@ export default {
   },
   methods: {
     mapInitialize() {
-      this.myMap = L.map('mapid').fitWorld();
+      this.map = L.map('mapid').fitWorld();
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
@@ -41,16 +39,16 @@ export default {
         tileSize: 512,
         zoomOffset: -1,
         accessToken: process.env.VUE_APP_MAPBOX_ACCESS_TOKEN
-      }).addTo(this.myMap);
-      this.myMap.locate({setView: true, maxZoom: 15});
-      this.myMap.on('locationfound', this.onLocationFound);
-      this.myMap.on('locationerror', this.onLocationError);
+      }).addTo(this.map);
+      this.map.locate({setView: true, maxZoom: 15});
+      this.map.on('locationfound', this.onLocationFound);
+      this.map.on('locationerror', this.onLocationError);
     },
     onLocationFound(e) {
       var radius = e.accuracy;
-      L.marker(e.latlng).addTo(this.myMap)
+      L.marker(e.latlng).addTo(this.map)
       .bindPopup("You are within " + radius + " meters from this point").openPopup();
-      L.circle(e.latlng, radius).addTo(this.myMap);
+      L.circle(e.latlng, radius).addTo(this.map);
     },
     onLocationError(e) {
     alert(e.message);
