@@ -15,9 +15,9 @@
             </header>
             <footer>
               <p>
-              This app is an example of how to use different map API<br>
+              This app is an example of how to use different map APIs<br>
               You can use the header to see the result with different libraries<br>
-              Such as Leaflet or OpenLayer libraries.<br>
+              Such as Leaflet or OpenLayer.<br>
               </p>
             </footer>
           </article>
