@@ -47,7 +47,7 @@ export default {
     onLocationFound(e) {
       var radius = e.accuracy;
       L.marker(e.latlng).addTo(this.map)
-      .bindPopup("You are within " + radius + " meters from this point").openPopup();
+      .bindPopup(`You are within ${radius} meters from this point`).openPopup();
       L.circle(e.latlng, radius).addTo(this.map);
     },
     onLocationError(e) {
