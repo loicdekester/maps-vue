@@ -1,6 +1,9 @@
 <template>
   <section class="openlayer-page">
-    <div id="map">
+    <div id="map"></div>
+    <!-- Popup -->
+    <div id="popup" class="ol-popup">
+      <div id="popup-content"></div>
     </div>
   </section>
 </template>
@@ -35,5 +38,16 @@ export default {
 /* Map container should have defined height */
 #map {
   height: 400px;
+}
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 40px;
+  min-width: 280px;
+  font-size: 12px;
 }
 </style>
