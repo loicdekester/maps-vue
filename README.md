@@ -1,7 +1,7 @@
 # maps-vue
 
 # auth-vue
-Example to demonstrate how to use two different map libraries. the first one is Leaflet and the second one is OpenLayers.
+Example to demonstrate how to use two different map libraries. the first one is [Leaflet](https://leafletjs.com/) and the second one is [OpenLayers](https://openlayers.org/).
 
 In the example, we display a map that that is going to zoom in on your position and put a pin on it and a pop up that shows the accuracy.
 
